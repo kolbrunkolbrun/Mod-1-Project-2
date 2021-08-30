@@ -6,10 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verkefni 2</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Kolkrabba logo -->
     <div class="container">
-        <img src="images/octopus.svg" alt="octopus" class="octopus-logo">
+        <header>
+            <img src="images/octopus.svg" alt="octopus" class="octopus-logo">
+
+            <!-- navigation bar -->
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="images/octopus.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                <!-- unordered list -->
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop">
+                        <img src="images/exit.png" alt="exit menu">
+                    </li>
+                    <li><a href="https://en.wikipedia.org/wiki/Octopus">home</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Octopus">services</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Octopus">about</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Octopus">contact</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Section 1, mynd og texti -->
+        <section>
+            <img src="images/octopus2.jpeg" alt="octopus2" class="octopus2">
+            
+            <h1>Kolkrabbar eru mjög áhugaverð dýr</h1>
+            <p class="subhead">Þeir lifa þó oftast bara í eitt ár</p>
+        </section>
     </div>
+
+    <!-- section 2, blár litur og listi -->
+    <div class="blue-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/octo-list-1.png" alt="octo list 1">
+                    <p>Octopus are soft-bodied, eight-limbed molluscs of the order Octopoda</p>
+                </li>
+                <li>
+                    <img src="images/octo-list-2.png" alt="octo list 2">
+                    <p>Like other cephalopods, an octopus is bilaterally symmetric with two eyes and a beaked mouth at the center point of the eight limbs.</p>
+                </li>
+                <li>
+                    <img src="images/octo-list-3.png" alt="octo list 3">
+                    <p>Octopuses have a complex nervous system and excellent sight, and are among the most intelligent and behaviourally diverse of all invertebrates</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- grár container með myndum af fólki og kvótum, listi -->
+    <div class="gray-container">
+        <div class="container">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="images/user-1.jpg" alt="user testimonial picture" class="user-pic">
+                        <blockquote>Þessi vísindamaður rannsakar kolkrabba.</blockquote>
+                        <figcaption>Jón Jónsson</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="images/user-2.jpg" alt="user testimonial picture" class="user-pic">
+                        <blockquote>Þessi vísindamaður rannsakar líka kolkrabba.</blockquote>
+                        <figcaption>Sigríður Jónsdóttir
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- container með hnapp og info -->
+    <div class="container">
+        <h2>Start your free trial now!</h2>
+        <a href="#" class="cta">Get started!</a>
+    </div>
+
+    <!-- footer elements, call to action og info -->
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a href="#">
+                    <img src="images/octopus-logo.png" class="logo" alt="logo">
+                </a>
+                    <p class="address">Laugavegur 0<br>Ísland</p>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Javascript test, virkar ekki -->
+    <script>
+
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e)) {
+           nav.classList.toggle('hide-mobile');
+           e.preventDefault();
+        });
+
+        exit.addEventListener('click', function(e)) {
+           nav.classList.add('hide-mobile');
+           e.preventDefault();
+        });
+
+
+    </script>
+
 </body>
 </html>
